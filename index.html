@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web to Lead</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://www.google.com/recaptcha/api.js"></script>
     <script src="script.js"></script>
   </head>
   <body>
@@ -15,9 +16,18 @@
       onsubmit="beforeHandler()"
     >
       <input type="hidden" name="oid" value="00DdM00000QH97x" />
-      <input type="hidden" name="retURL" />
+      <input
+        type="hidden"
+        name="retURL"
+        value="https://aniket-commits-s.github.io/Web-to-Lead/thanks.html"
+      />
 
       <input type="hidden" name="Lead_Date__c" class="outputdate" />
+      <input
+        type="hidden"
+        name="captcha_settings"
+        value='{"keyname":"WebtoLead","fallback":"true","orgId":"00DdM00000QH97x","ts":""}'
+      />
 
       <label for="first_name">First Name</label
       ><input
@@ -61,6 +71,11 @@
       ><br /> -->
 
       <input type="submit" name="submit" class="submit" />
+      <div
+        class="g-recaptcha"
+        data-sitekey="6LfGNiItAAAAAARAFJLcQ4BsIh7__T20Si_b8mkw"
+      ></div>
+      <br />
     </form>
   </body>
 </html>
