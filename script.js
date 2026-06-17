@@ -1,15 +1,15 @@
-let capcthachecked = false;
+let captchachecked = false;
 function beforeHandler(event) {
-  if (capcthachecked) {
+  if (captchachecked) {
     let outputdate = document.querySelector(".outputdate");
     let inputdate = document.querySelector(".inputdate");
     let formatteddate = new Date(inputdate.value).toLocaleDateString("en-IN");
     outputdate.value = formatteddate;
     console.log("Input value is mentioned in the side", inputdate.value);
-//   } else {
-//     alert("Please check the captcha to submit the lead");
-//     event.preventDefault();
-//   }
+   else {
+    alert("Please check the captcha to submit the lead");
+    event.preventDefault();
+  }
 
   function timestamp() {
     var response = document.getElementById("g-recaptcha-response");
@@ -25,6 +25,7 @@ function beforeHandler(event) {
   setInterval(timestamp, 500);
 
   function captchasuccess() {
-    capcthachecked = true;
+    captchachecked = true;
   }
+}
 }
