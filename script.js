@@ -6,7 +6,7 @@ function beforeHandler(event) {
     let formatteddate = new Date(inputdate.value).toLocaleDateString("en-IN");
     outputdate.value = formatteddate;
     console.log("Input value is mentioned in the side", inputdate.value);
-   else {
+  } else {
     alert("Please check the captcha to submit the lead");
     event.preventDefault();
   }
@@ -27,5 +27,4 @@ function beforeHandler(event) {
   function captchasuccess() {
     captchachecked = true;
   }
-}
 }
